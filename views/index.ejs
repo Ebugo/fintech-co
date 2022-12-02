@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fintech.co challenge</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+        * {
+            font-family: "Inter", "sans-serif";
+            font-size: 16px;
+            line-height: 24px;
+            color: #344054;
+        }
+
+        a {
+            text-decoration-line: underline;
+            color: #4E903C;
+        }
+
+        table {
+            border-collapse: separate;
+            border-spacing: 0;
+            border-color: transparent;
+            border: none;
+        }
+
+        table td {
+            padding: 0 24px;
+        }
+
+        table.footer td {
+            font-size: 14px;
+            line-height: 20px;
+            text-align: center;
+            color: #535E74;
+        }
+
+        table.footer td {
+            padding: 0;
+        }
+
+        @media screen and (max-width: 639px) {
+            body {
+                max-width: 375px;
+            }
+
+            * {
+                font-size: 14px;
+                line-height: 20px;
+            }
+
+            .logo {
+                width: 91px;
+            }
+
+            h2 {
+                font-size: 16px;
+                line-height: 24px;
+            }
+
+            table td {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+    </style>
+</head>
+
+<body style="width: 100%; max-width: 640px;margin:auto;padding: 32px;">
+    <table style="max-width: 100%;">
+        <tbody>
+            <tr>
+                <td>
+                    <h2 style="font-weight: 600;font-size: 24px;line-height: 32px;color: #101828;">
+                        Fintech.co.
+                    </h2>
+                    <p>Invitees handler.</p>
+                    <h4>Invitees : <%= count %> found</h4>
+                    <p><%= count %> invitees found.</p>
+                    <% invitees.forEach((invitee, i) => { %>
+                        <p>Invitee <%= i + 1 %> ID : <%= invitee %></p>
+                    <% }) %>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

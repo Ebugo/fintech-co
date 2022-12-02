@@ -2,7 +2,7 @@ import { readFileSync } from "fs";
 import Gis from "./gis.helper";
 import Publisher from "./publisher.helper";
 
-const readCustomerRecords = readFileSync("customers.txt").toString();
+const readCustomerRecords = readFileSync("data/customers.txt").toString();
 const parsedCustomerRecords = readCustomerRecords.split("\n");
 const eventLocation = [52.493256, 13.446082];
 const range = 100; //! KM;
@@ -37,6 +37,9 @@ for (let index = 0; index < parsedCustomerRecords.length; index++) {
 }
 
 invitees.sort();
+
 console.log();
 console.log(parsedCustomerRecords.length, "records,", invitees.length, "invitees.");
 Publisher.publish(invitees);
+
+export const records = { invitees, parsedCustomerRecords };
