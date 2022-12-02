@@ -1,0 +1,8 @@
+.env
+*.env
+
+node_modules
+
+yarn.lock
+package-lock.json
+*.lock
