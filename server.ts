@@ -11,8 +11,8 @@ app.get('/', (req, res) => {
     const { invitees, parsedCustomerRecords } = records;
 
     res.render('index', {
-        invitees, 
-        count: parsedCustomerRecords.length
+        invitees: invitees || [], 
+        count: (parsedCustomerRecords || []).length
     })
 });
 

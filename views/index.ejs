@@ -80,7 +80,7 @@
                     </h2>
                     <p>Invitees handler.</p>
                     <h4>Invitees : <%= count %> found</h4>
-                    <p><%= count %> invitees found.</p>
+                    <p><%= count %> records supplied, <%= invitees.length %> valid invitees found.</p>
                     <% invitees.forEach((invitee, i) => { %>
                         <p>Invitee <%= i + 1 %> ID : <%= invitee %></p>
                     <% }) %>
